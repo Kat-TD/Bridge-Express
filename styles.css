@@ -15,14 +15,14 @@
     overflow: hidden;
     margin-bottom: 2em;
     position: relative;
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
 }
 
 .head{
     width: 100%;
-    height: 50px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 7%;
 }
 
@@ -40,13 +40,45 @@
 .nav li{
     margin-left: 20px;
     list-style-type: none;
+    overflow: hidden;
+    padding: 10px 0;
 }
 
 .nav li a{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 5px;
+    font-size: .8rem;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #727272;
+    position: relative;
+    transition: .2s ease-in;
+}
+
+.nav li a:hover{
+    color: #df2a2a;
+}
+
+.nav li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 100px;
+    background-color: #df2a2a;
+    transition: .1s ease-in;
+}
+
+.nav li a:hover::after{
+    left: 0px;
+}
+
+.slider{
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+
 }
 
 .slide{
@@ -105,4 +137,8 @@
     background-color: #df2a2a;
     margin-top: 1em;
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.caption input:hover{
+    
 }
