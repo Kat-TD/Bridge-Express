@@ -13,7 +13,6 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* margin-bottom: 2em; */
     position: relative;
 }
 
@@ -78,48 +77,39 @@
 
 .slider{
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(150deg, white, transparent 55%), url(./images/shopping-woman/vecteezy_ai-generated-a-black-woman-shopping-at-healthy-food-market_36792317.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 .slide{
     display: flex;
-}
-
-.slide img{
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+    max-height: 100vh;
 }
 
 .caption{
+    height: 100vh;
     color: var(--caption);
-    justify-content: flex-start;
-    align-items: flex-start;
     padding-left: 15%;
     padding-top: 10%;
 }
 
-.caption h2{
+.caption h1{
     font-size: clamp(1.2rem, 4vw, 3rem);
     text-shadow: -3px 3px 3px black;
-    max-width: 600px;
+    padding-bottom: .5em;
+    max-width: 553px;
     position: relative;
     margin-bottom: 0.5em;
+    border-bottom: #da5858 solid 3px;
+
 }
 
-.caption h2 span{
-    color: #df2a2a;
+.caption h1 span{
+    color: #da5858;
     text-transform:uppercase;
-}
-
-.caption h2::after{
-    content: "";
-    bottom: -10px;
-    left: 0px;
-    width: 600px;
-    height: 3px;
-    background-color: #df2a2a;
-    position: absolute;
 }
 
 .caption h4{
@@ -134,7 +124,7 @@
     font-size: clamp(.8rem, 2vw, 1.2rem);
     font-weight: 700;
     color: var(--caption);
-    background-color: #df2a2a;
+    background-color: #da5858;
     margin-top: 1em;
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
     transition: .1s ease-in;
@@ -147,65 +137,177 @@
 
 .introduction{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    overflow: hidden;
+    /* margin-bottom: 5em; */
 }
 
 .intro.part-1{
     flex: 2;
     position: relative;
-}
-
-.intro img{
-    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/blue-building/pexels-pixabay-208560.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .intro .explainer{
-    /* width: 70%; */
     position: absolute;
-    bottom: 2em;
+    bottom: 3em;
     right: 0;
     display: flex;
     gap: 2em;
 }
 
 .intro .explainer p{
-    color: #df2a2a;
+    font-family: roboto;
+    color: var(--caption);
+    text-shadow: -1px 1px 1px black;
+    font-weight: 600;
+    letter-spacing: .07rem;
     width: 300px;
     height: 200px;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .intro .explainer p:nth-child(1){
-    background-image: url(./images/business-man/pexels-reneasmussen-2505026.jpg);
+    background-image: linear-gradient(30deg, rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/business-man/pexels-reneasmussen-2505026.jpg);
     background-size: cover;
-    background-color: aqua;
+    background-position: center;
     padding: 1em;
 }
 
 .intro .explainer p:nth-child(2){
-    background-image: url(./images/couple/vecteezy_romantic-happy-young-couple-relax-at-modern-home-indoors_12140531.jpg);
+    background-image: linear-gradient(30deg, rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/couple/vecteezy_romantic-happy-young-couple-relax-at-modern-home-indoors_12140531.jpg);
     background-size: cover;
-    background-color: aqua;
+    background-position: center;
     padding: 1em;
 }
 
 .part-2{
     flex: 1;
-    padding: 2em 2em 0 2em ;
-    border-top: 3px solid #df2a2a;
+    padding: 4em 2em 0 2em ;
+    border-top: 3px solid #da5858;
     position: relative;
+    color: #727272;
 }
 
-.part-two{
+.card{
     position: absolute;
-    bottom: 2em;
+    bottom: 3em;
     left: 2em;
     display: flex;
     width: 300px;
     height: 200px;
-    background-image: url(./images/blue-building/pexels-pixabay-208560.jpg);
+    font-family: roboto;
+    color: var(--caption);
+    text-shadow: -1px 1px 1px black;
+    font-weight: 600;
+    letter-spacing: .07rem;
+    background-image: linear-gradient(rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/blue-building/pexels-pixabay-208560.jpg);
     background-size: cover;
-    background-color: aqua;
+    background-position: center;
     padding: 1em;
+    display: flex;
+    align-items: center;
+    
+}
+
+.welcome{
+    margin-bottom: .5em;
+    color: #da5858;
+    font-size: clamp(1.2rem, 4vw, 3rem);
+}
+
+.sub-heading{
+    margin-bottom: 1em;
+}
+
+.about{
+    margin-bottom: 2em;
+}
+
+.apply{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #727272;
+    font-family: roboto;
+    background-color: transparent;
+    transition: .1s ease-in;
+}
+
+.apply:hover{
+    color: #da5858;
+}
+
+.fa-arrow-turn-up{
+    transform: rotate(90deg);
+    margin-left: .5em;
+}
+
+.qualify{
+    width: 100%;
+    height: fit-content;
+    background-color: #dfdfdf5b;
+    padding: 3em 20em;
+    
+}
+
+.qualification{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+}
+
+.qualify h2{
+    padding-top: 1em;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 2em;
+}
+
+.explain{
+    padding: 2em;
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #727272;
+    position: relative;
+}
+
+.explain::before{
+    content: "";
+    width: 2px;
+    height: 50px;
+    background-color: #727272;
+    left: 0;
+    top: 15px;
+    position: absolute;
+}
+
+.explain::after{
+    content: "";
+    height: 2px;
+    width: 50px;
+    background-color: #727272;
+    left: 0;
+    top: 15px;
+    position: absolute;
+}
+
+.expl-icon{
+    font-size: 2em;
+    margin-bottom: .3em;
+}
+
+.explain p{
+    font-weight: 500;
+    flex-basis: 1;
 }
