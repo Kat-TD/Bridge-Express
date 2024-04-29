@@ -347,10 +347,34 @@
 
 .required-docs ul{
     list-style-type: none;
-
 }
 
 .required-docs ul li i{
     font-size: 13px;
     margin-right: 10px;
+}
+
+.required-docs ul li{
+    padding: 1em;
+}
+
+.required-docs ul li:hover{
+    background-color: #da5858;
+    color: var(--caption);
+    transition: .1s ease-in;
+    position: relative;
+}
+
+.required-docs ul li:nth-child(1):after{
+    content: "SA ID Book or Card";
+    position: absolute;
+    right: -200px;
+    bottom: -150px;
+    width: 200px;
+    height: 201px;
+    background-color: #da5858;
+    color: var(--caption);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
