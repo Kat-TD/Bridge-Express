@@ -187,10 +187,11 @@
 
 .part-2{
     flex: 1;
-    padding: 4em 2em 0 2em ;
+    padding: 4em 3em 0 2em ;
     border-top: 3px solid #da5858;
     position: relative;
     color: #727272;
+    text-align: justify;
 }
 
 .card{
@@ -377,4 +378,150 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.required-docs ul li:nth-child(2):after{
+    content: "Latest Payslip";
+    position: absolute;
+    right: -200px;
+    bottom: -99px;
+    width: 200px;
+    height: 201px;
+    background-color: #da5858;
+    color: var(--caption);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.required-docs ul li:nth-child(3):after{
+    content: "Bank Statement";
+    position: absolute;
+    right: -200px;
+    bottom: -48px;
+    width: 200px;
+    height: 201px;
+    background-color: #da5858;
+    color: var(--caption);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-check{
+    padding: 3em 2em;
+    background-color: #4b4747;
+    color: var(--caption);
+}
+
+.procedure{
+    padding: 3em 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.steps{
+    color: #727272;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+.steps.follow{
+    display: flex;
+    flex-direction: column;
+}
+
+.steps.follow h2{
+    color: #da5858;
+    margin-bottom: .5em;
+}
+
+.steps.follow p{
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.steps h2{
+    color: #da5858;
+    font-size: clamp(1.2rem, 4vw, 3rem);
+}
+
+.steps.one p,
+.steps.two p,
+.steps.three p{
+    margin-left: 1em;
+    position: relative;
+    flex-grow: 1;
+}
+
+.steps.one p::after,
+.steps.two p::after,
+.steps.three p::after{
+    content: "";
+    position: absolute;
+    background-color: #da5858;
+    width: 10px;
+    height: 30px;
+    right: -20px;
+    top: 0;
+}
+
+.testimonial-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials{
+    text-align: center;
+    margin: 3em auto;
+}
+
+.testimonials h1{
+    color: #da5858;
+    font-size: clamp(1.2rem, 4vw, 3rem);
+    margin-bottom: 1em;
+}
+
+.testimonial{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    margin: 0 1em;
+    background-color: #da5858;
+    border-radius: 20px;
+    color: var(--caption);
+}
+
+.image{
+    width: 200px;
+    height: 150px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.testimonial img{
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.testimonial h4{
+    margin-bottom: 1em;
+}
+
+.testimonial p{
+    text-align: center;
+    padding: 0 0 2em 0;
 }
