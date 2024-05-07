@@ -319,6 +319,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .required-docs{
@@ -343,7 +344,6 @@
 }
 
 .required-docs h4{
-    /* font-size: clamp(.8rem, 4vw, 2rem); */
     margin-bottom: 1em;
 }
 
@@ -476,6 +476,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
 }
 
 .testimonials{
@@ -496,7 +498,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 1em;
-    margin: 0 1em;
+    /* margin: 0 1em; */
     background-color: #da5858;
     border-radius: 20px;
     color: var(--caption);
@@ -580,7 +582,7 @@
     padding: .5em 1em;
     color: #727272;
     border-bottom: #cacaca 2px solid;
-    width: 300px;
+    width: clamp(300px, 75vw, 400px);
 }
 
 .contact form input::placeholder{
@@ -596,7 +598,7 @@
     outline: none;
     padding: .5em 1em;
     color: #727272;
-    width: 300px;
+    width: clamp(300px, 75vw, 400px);
     margin-bottom: 1em;
 }
 
@@ -620,6 +622,36 @@
 .contact input[type="submit"]:hover{
     color: #df2a2a;
     background-color: var(--caption);
+}
+
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: #4b4747;
+    color: var(--caption);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 3em;
+    padding: 5em 2em;
+}
+
+.logo.bottom{
+    width: 200px;
+}
+
+.logo.bottom img{
+    width: 100%;
+}
+
+.branches h3{
+    margin-bottom: 1em;
+    color: #da5858;
+}
+
+.branches p{
+    margin-bottom: .3em;
 }
 
 @media screen and (max-width: 768px){
