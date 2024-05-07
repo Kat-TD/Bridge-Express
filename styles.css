@@ -652,8 +652,63 @@ footer{
 
 .branches p{
     margin-bottom: .3em;
+    font-size: clamp(.8rem, 2vw, 1rem);
 }
 
 @media screen and (max-width: 768px){
+    .testimonials{
+        text-align: center;
+        margin: 3em auto;
+    }
     
+    .testimonials h1{
+        color: #da5858;
+        font-size: clamp(1.2rem, 4vw, 3rem);
+        margin-bottom: 1em;
+    }
+    
+    .testimonial-container{
+        flex-direction: column;
+    }
+    
+    .testimonial{
+        width: 200px;
+        border-radius: 20px;
+        color: var(--caption);
+    }
+    
+    .image{
+        width: 200px;
+        height: 150px;
+        border-radius: 10%;
+        margin-bottom: 1em;
+    }
+    
+    .testimonial img{
+        top: -20px;
+    }
+    
+    .contact{
+        margin-top: 0em;
+    }
+
+    .contact h1{
+        padding-top: 0em;
+        margin-bottom: 2em;
+    }
+    
+    .contact form input[type="submit"]{
+        font-size: .9rem;
+    }
+    
+    .contact input[type="submit"]:hover{
+        color: #df2a2a;
+        background-color: var(--caption);
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: start;
+        padding: 5em 5em;
+    }
 }
