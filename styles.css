@@ -9,6 +9,10 @@
     font-family: "Bona Nova", serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .header{
     width: 100%;
     height: 100svh;
@@ -137,96 +141,40 @@
 
 .introduction{
     width: 100%;
-    height: 100svh;
-    display: flex;
-    /* margin-bottom: 5em; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: start;
 }
 
-.intro.part-1{
+.blue-building{
+    width: 100%;
+    height: 100vh;
     flex: 2;
-    position: relative;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/blue-building/pexels-pixabay-208560.jpg);
+    background-image: url(./images/blue-building/pexels-pixabay-208560.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-.intro .explainer{
-    position: absolute;
-    bottom: 3em;
-    right: 0;
-    display: flex;
-    gap: 2em;
-}
-
-.intro .explainer p{
-    font-family: roboto;
-    color: var(--caption);
-    text-shadow: -1px 1px 1px black;
-    font-weight: 600;
-    letter-spacing: .07rem;
-    width: 300px;
-    height: 200px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-
-.intro .explainer p:nth-child(1){
-    background-image: linear-gradient(30deg, rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/business-man/pexels-reneasmussen-2505026.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 1em;
-}
-
-.intro .explainer p:nth-child(2){
-    background-image: linear-gradient(30deg, rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/couple/vecteezy_romantic-happy-young-couple-relax-at-modern-home-indoors_12140531.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 1em;
-}
-
-.part-2{
+.intro{
     flex: 1;
-    padding: 4em 3em 0 2em ;
-    border-top: 3px solid #da5858;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+    padding: 0 2em;
+    margin-top: 10em;
     position: relative;
     color: #727272;
-    text-align: justify;
 }
 
-.card{
-    position: absolute;
-    bottom: 3em;
-    left: 2em;
-    display: flex;
-    width: 300px;
-    height: 200px;
-    font-family: roboto;
-    color: var(--caption);
-    text-shadow: -1px 1px 1px black;
-    font-weight: 600;
-    letter-spacing: .07rem;
-    background-image: linear-gradient(rgba(255, 51, 0, 0.603),rgba(255, 0, 0, 0.61)), url(./images/blue-building/pexels-pixabay-208560.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    
-}
-
-.welcome{
-    margin-bottom: .5em;
+.intro h2{
+    font-size: clamp(1.2rem, 4vw, 3rem);
     color: #da5858;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-}
-
-.sub-heading{
-    margin-bottom: 1em;
-}
-
-.about{
-    margin-bottom: 2em;
 }
 
 .apply{
@@ -234,18 +182,122 @@
     border: none;
     outline: none;
     color: #727272;
+    font-weight: 600;
     font-family: roboto;
     background-color: transparent;
     transition: .1s ease-in;
 }
 
-.apply:hover{
-    color: #da5858;
-}
-
 .fa-arrow-turn-up{
     transform: rotate(90deg);
     margin-left: .5em;
+    color: #727272;
+}
+
+.apply:hover,
+.fa-arrow-turn-up:hover{
+    color: #da5858;
+}
+
+.explainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    position: absolute;
+    left: -695px;
+    bottom: -250px;
+}
+
+.explainer p{
+    width: 300px;
+    height: 200px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+.explainer p:hover{
+    color: var(--caption);
+}
+
+.explainer p:nth-child(1){
+    background-image: linear-gradient(30deg, rgba(212, 212, 212, 0.1), rgba(212, 212, 212, 0.1)), url(./images/business-man/pexels-reneasmussen-2505026.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.explainer p:nth-child(1)::before{
+    content: "Pay-Day Loans";
+    position: absolute;
+    color: #da5858;
+    font-size: 2rem;
+    text-shadow: -1px 1px 2px black;
+    font-weight: 700;
+}
+
+.explainer p:nth-child(2){
+    background-image: linear-gradient(30deg, rgba(212, 212, 212, 0.1), rgba(212, 212, 212, 0.1)), url(./images/couple/vecteezy_romantic-happy-young-couple-relax-at-modern-home-indoors_12140531.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.explainer p:nth-child(2)::before{
+    content: "Our Clients";
+    position: absolute;
+    color: #da5858;
+    font-size: 2rem;
+    text-shadow: -1px 1px 2px black;
+    font-weight: 700;
+}
+
+.explainer p:nth-child(3){
+    background-image: linear-gradient(30deg, rgba(212, 212, 212, 0.1), rgba(212, 212, 212, 0.1)), url(./images/house/pexels-binyaminmellish-106399.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    position: relative; 
+}
+
+.explainer p:nth-child(3)::before{
+    content: "Industry Experts";
+    position: absolute;
+    color: #da5858;
+    font-size: 2rem;
+    text-shadow: -1px 1px 2px black;
+    font-weight: 700;
+}
+
+.explainer p:nth-child(1):hover{
+    background-image: linear-gradient(30deg, #da5858, #da5858);
+}
+
+.explainer p:nth-child(1):hover::before{
+    content: "";
+}
+
+.explainer p:nth-child(2):hover{
+    background-image: linear-gradient(30deg, #da5858, #da5858);
+}
+
+.explainer p:nth-child(2):hover::before{
+    content: "";
+}
+
+.explainer p:nth-child(3):hover{
+    background-image: linear-gradient(30deg, #da5858, #da5858);
+}
+
+.explainer p:nth-child(3):hover::before{
+    content: "";
 }
 
 .qualify{
@@ -483,6 +535,12 @@
 .testimonials{
     text-align: center;
     margin: 3em auto;
+    transition: .2s ease-in-out;
+}
+
+.testimonial:hover{
+    transition: .2s ease-in-out;
+    transform: scale(1.1);
 }
 
 .testimonials h1{
@@ -655,6 +713,64 @@ footer{
     font-size: clamp(.8rem, 2vw, 1rem);
 }
 
+@media screen and (max-width: 1024px){
+    .introduction{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5em;
+    }
+    .blue-building{
+        display: none;
+    }
+    .explainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5em;
+        align-items: center;
+        gap: 5em;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        align-self: center;
+    }
+    
+    .explainer p{
+        color: var(--caption);
+        background-color: #da5858;
+        box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .explainer p:nth-child(1){
+        background-image: none;
+    }
+    
+    .explainer p:nth-child(1)::before{
+        top: -50px;
+    }
+    
+    .explainer p:nth-child(2){
+        background-image: none;
+    
+    }
+    
+    .explainer p:nth-child(2)::before{
+        top: -50px;
+    
+    }
+    
+    .explainer p:nth-child(3){
+        background-image: none;
+    
+    }
+    
+    .explainer p:nth-child(3)::before{
+        top: -50px;
+    
+    }
+}
+
+
 @media screen and (max-width: 768px){
     .slide{
         display: flex;
@@ -691,65 +807,96 @@ footer{
     
     .introduction{
         display: flex;
-    }
-    .intro.part-1{
-        flex: 0;
-        background-image: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5em;
     }
     
-    .intro .explainer{
-        position: absolute;
-        left: 50%;
-        bottom: 0;
+    .blue-building{
+        display: none;
+    }
+    
+    .intro{
+        flex: 0;
+        margin-top: 5em;
         display: flex;
         flex-direction: column;
-    }
-    
-    .intro .explainer p{
-    }
-    
-    .intro .explainer p:nth-child(1){
-        padding: 0em;
-    }
-    
-    .intro .explainer p:nth-child(2){
-        padding: 1em;
-    }
-    
-    .part-2{
-        
-    }
-    
-    .card{
+        justify-content: center;
+        align-items: start;
+        gap: 1em;
+        padding: 0 2em;
         position: relative;
-        bottom: inherit;
-        left: inherit;
-        display: flex;
-        
-    }
-    
-    .welcome{
-        
-    }
-    
-    .sub-heading{
-        
-    }
-    
-    .about{
-        margin-bottom: 2em;
     }
     
     .apply{
-        cursor: pointer;
         border: none;
-        outline: none;
-        color: #727272;
-        font-family: roboto;
-        background-color: transparent;
-        transition: .1s ease-in;
+        border-radius: 10px;
+        padding: .5em 1em;
+        background-color: #da5858;
+        color: var(--caption);
     }
 
+    .apply:hover{
+        background-color: var(--caption);
+    }
+    
+    .fa-arrow-turn-up{
+        color: var(--caption);
+    }
+    
+    .apply:hover,
+    .fa-arrow-turn-up:hover{
+        color: #da5858;
+    }
+    
+    .explainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5em;
+        align-items: center;
+        gap: 5em;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        align-self: center;
+    }
+    
+    .explainer p{
+        color: var(--caption);
+        background-color: #da5858;
+        box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .explainer p:nth-child(1){
+        background-image: none;
+    }
+    
+    .explainer p:nth-child(1)::before{
+        top: -50px;
+    }
+    
+    .explainer p:nth-child(2){
+        background-image: none;
+
+    }
+    
+    .explainer p:nth-child(2)::before{
+        top: -50px;
+
+    }
+    
+    .explainer p:nth-child(3){
+        background-image: none;
+
+    }
+    
+    .explainer p:nth-child(3)::before{
+        top: -50px;
+
+    }
+    
     .qualify{
         padding: 5em;
     }
@@ -912,7 +1059,7 @@ footer{
     
     .contact h1::after{
         right: -85px;
-    }
+     }
     
 
     footer{
