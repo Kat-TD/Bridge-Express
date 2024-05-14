@@ -1055,10 +1055,12 @@ footer{
 
     .contact h1::before{
         left: -85px;
+        width: 50px;
     }
     
     .contact h1::after{
         right: -85px;
+        width: 50px;
      }
     
 
